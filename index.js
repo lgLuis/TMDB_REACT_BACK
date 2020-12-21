@@ -10,6 +10,7 @@ let searchMovie="";
 
 app.get('/search/movies:searchMovie', (req,res)=>{
     searchMovie=req.params.searchMovie;
+//    fetch(`https://api.themoviedb.org/3/search/movie?api_key=b78674d3628205a6d6750bf73d941a40&query=${searchMovie}/`)
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=b78674d3628205a6d6750bf73d941a40&query=${searchMovie}/`)
     .then(res=>res.json())
     .then(resultado=>{
