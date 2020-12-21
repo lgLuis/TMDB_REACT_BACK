@@ -1,4 +1,4 @@
-const fecth = require ('node-fetch')
+const fetch = require ('node-fetch')
 const mongoose = require ('mongoose')
 const requestLog = require('./requestLog')
 const express =require('express')
@@ -30,11 +30,11 @@ log.save().then(function(logCreated){
 //mongoose.connect('mongodb+srv://root:<password>@cluster0.mjkgl.mongodb.net/<dbname>?retryWrites=true&w=majority', function(err){
 mongoose.connect('mongodb+srv://root:casa@cluster0.mjkgl.mongodb.net/tmdb?retryWrites=true&w=majority', function(err){
 if(err){
-    console.log("ERROR")
+    console.log("ALGO SALIO MAL AL ESTABLECER LA CONEXION")
 }else{
     app.listen('4200', (err)=>{
         console.log("SERVER UP AND RUNNING")
     })
-    console.log("Conexcion Correacta hacia la Base de Datos")
+    console.log("CONEXION SATISFACTORIA")
     }
 });
